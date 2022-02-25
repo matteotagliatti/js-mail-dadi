@@ -9,6 +9,12 @@ const emails = [
 const mailOutput = document.getElementById("mail-output");
 
 const promptEmail = prompt("Your email");
+
+if (promptEmail === null || promptEmail === "" || !isNaN(promptEmail)) {
+  alert("inserisci un email");
+  throw new Error("inserisci stringa in prompt");
+}
+
 let emailMessage = `Email <strong>${promptEmail}</strong> non può non accedere in quanto non presente. `;
 
 for (let i = 0; i < emails.length; i++) {
