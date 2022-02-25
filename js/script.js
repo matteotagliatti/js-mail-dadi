@@ -8,13 +8,13 @@ const emails = [
 
 let mailOutput = document.getElementById("mail-output");
 
-let emailMessage = "Email non presente";
-let promptEmail = prompt("Your email");
+const promptEmail = prompt("Your email");
 
 for (let i = 0; i < emails.length; i++) {
   if (emails[i] === promptEmail) {
-    emailMessage = "Email presente";
+    let emailMessage = `Email <strong>${promptEmail}</strong> può accedere in quanto presente.`;
   }
 }
 
-mailOutput.innerText = emailMessage;
+emailMessage = `Email <strong>${promptEmail}</strong> non può non accedere in quanto non presente `;
+mailOutput.innerHTML = emailMessage;
