@@ -8,7 +8,7 @@ const emails = [
 
 const mailOutput = document.getElementById("mail-output");
 
-const promptEmail = prompt("Your email");
+const promptEmail = prompt("Your email").toLocaleUpperCase().trim();
 
 if (promptEmail === null || promptEmail === "" || !isNaN(promptEmail)) {
   alert("inserisci un email");
